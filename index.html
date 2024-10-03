@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="EN" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <span>Ahmed</span>
+            </div>
+            <div class="links">
+                <div class="link"><a href="index.html">Home</a></div>
+                <div class="link"><a href="about.html">About</a></div>
+                <div class="link"><a href="educationl.html">Education</a></div>
+                <div class="link"><a href="experience.html">Experience</a></div>
+                <div class="link"><a href="skills.html">Skills</a></div>
+                <div class="link"><a href="projects.html">Projects</a></div>
+                <div class="link"><a href="contact.html">Contact Me</a></div>
+                <div class="link"><a href="album.html">Album</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="main-container">
+            <div class="image">
+                <img src="me.png" alt="My profile picture">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left">HALA! I'm </h1>
+                <h2><span>Ahmed Abdulrhman</span></h2>
+
+                <style>
+                    /* Allow scrolling while keeping the canvas fixed in the background */
+                    body,
+                    html {
+                        margin: 0;
+                        padding: 0;
+                        height: 100%;
+                        font-family: 'Poppins', sans-serif;
+                        overflow-x: hidden;
+                        /* Prevent horizontal scroll */
+                    }
+
+                    /* Style the canvas to cover the background */
+                    canvas {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        z-index: -1;
+                        /* Ensure canvas stays in the background */
+                        width: 100vw;
+                        height: 100vh;
+                    }
+
+                    /* Fix for typewriter location and alignment */
+                    .typewriter {
+                        text-align: center;
+                        margin-top: 50px;
+                        /* Adjust this for proper vertical spacing */
+                        font-size: 2.5rem;
+                        font-family: 'Poppins', sans-serif;
+                    }
+
+                    .red-text {
+                        color: rgb(255, 255, 255);
+                        font-weight: bold;
+                    }
+
+                    /* Typewriter effect for the changing text */
+                    .typewriter-text {
+                        display: inline-block;
+                        overflow: hidden;
+                        border-right: 2px solid black;
+                        /* Cursor effect */
+                        white-space: nowrap;
+                        animation: typing 2s steps(15), blink 0.75s step-end infinite;
+                    }
+
+                    /* Typewriter animation */
+                    @keyframes typing {
+                        from {
+                            width: 0;
+                        }
+
+                        to {
+                            width: 100%;
+                        }
+                    }
+
+                    /* Blinking cursor animation */
+                    @keyframes blink {
+
+                        from,
+                        to {
+                            border-color: transparent;
+                        }
+
+                        50% {
+                            border-color: black;
+                        }
+                    }
+
+                    /* Container for content below typewriter */
+                    .content {
+                        padding: 50px;
+                        text-align: center;
+                        color: #b74b4b;
+                    }
+
+                    /* Binary code rain style (canvas already handles this) */
+                </style>
+                </head>
+
+                <body>
+
+                    <!-- Typewriter content -->
+                    <div class="typewriter">
+                        <span class="red-text">I'm</span>
+                        <span class="typewriter-text"></span>
+                    </div>
+
+                    <!-- Falling binary canvas -->
+                    <canvas id="binaryCanvas"></canvas>
+
+                    <script>
+                        const textArray = ["an IT student", "a Network Engineer", "a Software Engineer"];
+                        let textIndex = 0;
+                        let charIndex = 0;
+                        const typingSpeed = 50; // Speed of typing
+                        const erasingSpeed = 50; // Speed of erasing
+                        const newTextDelay = 2000; // Delay between typing new text
+
+                        const typewriterText = document.querySelector(".typewriter-text");
+
+                        function type() {
+                            if (charIndex < textArray[textIndex].length) {
+                                typewriterText.textContent += textArray[textIndex].charAt(charIndex);
+                                charIndex++;
+                                setTimeout(type, typingSpeed);
+                            } else {
+                                setTimeout(erase, newTextDelay); // After typing, wait then erase
+                            }
+                        }
+
+                        function erase() {
+                            if (charIndex > 0) {
+                                typewriterText.textContent = textArray[textIndex].substring(0, charIndex - 1);
+                                charIndex--;
+                                setTimeout(erase, erasingSpeed);
+                            } else {
+                                textIndex = (textIndex + 1) % textArray.length; // Move to next text
+                                setTimeout(type, typingSpeed);
+                            }
+                        }
+
+                        document.addEventListener("DOMContentLoaded", () => {
+                            setTimeout(type, newTextDelay); // Start typing effect after delay
+                        })
+
+                        // Binary code falling effect
+                        const canvas = document.getElementById('binaryCanvas');
+                        const ctx = canvas.getContext('2d');
+
+                        // Setting canvas width and height to cover the screen
+                        canvas.width = window.innerWidth;
+                        canvas.height = window.innerHeight;
+
+                        const fontSize = 18;
+                        const columns = canvas.width / fontSize;
+
+                        // Array to store the positions of falling binary code for each column
+                        const drops = Array(Math.floor(columns)).fill(1);
+
+                        // Drawing function to animate the binary rain
+                        function drawBinaryRain() {
+                            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)'; // Slight black background for fading effect
+                            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                            ctx.fillStyle = '#b74b4b'; // Binary code color (red)
+                            ctx.font = `${fontSize}px monospace`;
+
+                            // Loop through drops array
+                            for (let i = 0; i < drops.length; i++) {
+                                const binaryChar = Math.random() > 0.5 ? '1' : '0'; // Randomly choose '1' or '0'
+                                ctx.fillText(binaryChar, i * fontSize, drops[i] * fontSize);
+
+                                // Move the binary character down the screen
+                                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                                    drops[i] = 0; // Reset to top randomly
+                                }
+                                drops[i]++;
+                            }
+                        }
+
+                        setInterval(drawBinaryRain, 50); // Call the draw function every 50ms for smooth animation
+
+                        // Resize the canvas if the window size changes
+                        window.addEventListener('resize', () => {
+                            canvas.width = window.innerWidth;
+                            canvas.height = window.innerHeight;
+                        });
+                    </script>______________________
+
+
+                    <p>Focused on mastering in Cybersecurity field.</p>
+                    <p>Cybersecurity Is My Passion!</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/ahmedabdulrhman" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/sirahm0" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/Mr_aah0" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://discord.com/channels/@its.a7m" target="_blank"><i
+                                class="fa-brands fa-discord"></i></a>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Content below typewriter (you can add more sections like About, Skills, etc.) -->
+    <div class="content">
+        <h2>About Me</h2>
+        <p>Dedicated IT student at King Abdulaziz University with a strong foundation in programming, network
+            management, database management and software engineering. Passionate about cybersecurity and excited to use
+            my knowledge to solve real-world problems and eager to contribute to innovative projects.</p>
+        <!-- Add more sections like Projects, Experience, etc. -->
+    </div>
+
+    <!--Contact me-->
+    <section class="Contact Me" id="Contact Me">
+        <div class="Contact Me">
+            <div class="title">
+                <span>Have Any Question?</span>
+                <span><br>Contact Me!</span>
+            </div>
+            <div class="text">
+                <div class="topic"></div>
+                <a href="contact.html" target="_blank" download>
+                    <div class="button-wrapper">
+                        <button class="download-btn">Contact ME</button>
+                    </div>
+                </a>
+            </div>
+
+
+
+            
+
+
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+        <div class="text">
+            <span>Created By <a href="#">Ahmed</a> &#169; 2025 All Rights Reserved</span>
+        </div>
+    </footer>
+</body>
+
+</html>
