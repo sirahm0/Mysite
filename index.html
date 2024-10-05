@@ -136,9 +136,9 @@
                         const textArray = ["an IT student", "a Network Engineer", "a Software Engineer"];
                         let textIndex = 0;
                         let charIndex = 0;
-                        const typingSpeed = 50; // Speed of typing
-                        const erasingSpeed = 50; // Speed of erasing
-                        const newTextDelay = 2000; // Delay between typing new text
+                        const typingSpeed = 50;
+                        const erasingSpeed = 50; 
+                        const newTextDelay = 2000;
 
                         const typewriterText = document.querySelector(".typewriter-text");
 
@@ -148,7 +148,7 @@
                                 charIndex++;
                                 setTimeout(type, typingSpeed);
                             } else {
-                                setTimeout(erase, newTextDelay); // After typing, wait then erase
+                                setTimeout(erase, newTextDelay); 
                             }
                         }
 
@@ -158,13 +158,13 @@
                                 charIndex--;
                                 setTimeout(erase, erasingSpeed);
                             } else {
-                                textIndex = (textIndex + 1) % textArray.length; // Move to next text
+                                textIndex = (textIndex + 1) % textArray.length; 
                                 setTimeout(type, typingSpeed);
                             }
                         }
 
                         document.addEventListener("DOMContentLoaded", () => {
-                            setTimeout(type, newTextDelay); // Start typing effect after delay
+                            setTimeout(type, newTextDelay); 
                         })
 
                         // Binary code falling effect
@@ -191,7 +191,7 @@
 
                             // Loop through drops array
                             for (let i = 0; i < drops.length; i++) {
-                                const binaryChar = Math.random() > 0.5 ? '1' : '0'; // Randomly choose '1' or '0'
+                                const binaryChar = Math.random() > 0.5 ? '1' : '0';
                                 ctx.fillText(binaryChar, i * fontSize, drops[i] * fontSize);
 
                                 // Move the binary character down the screen
@@ -228,13 +228,11 @@
     </section>
 
 
-    <!-- Content below typewriter (you can add more sections like About, Skills, etc.) -->
     <div class="content">
         <h2>About Me</h2>
         <p>Dedicated IT student at King Abdulaziz University with a strong foundation in programming, network
             management, database management and software engineering. Passionate about cybersecurity and excited to use
             my knowledge to solve real-world problems and eager to contribute to innovative projects.</p>
-        <!-- Add more sections like Projects, Experience, etc. -->
     </div>
 
     <!--Contact me-->
@@ -252,12 +250,6 @@
                     </div>
                 </a>
             </div>
-
-
-
-            
-
-
         </div>
     </section>
 

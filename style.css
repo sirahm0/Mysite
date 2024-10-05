@@ -197,24 +197,19 @@ nav {
     flex-wrap: wrap;
 }
 
-
 .about h1 {
     color: #4bb78f;
-    /* Title color */
     font-size: 40px;
     margin-bottom: 20px;
     text-transform: uppercase;
-    /* Makes the heading uppercase */
     font-weight: bold;
     text-align: center;
 }
 
-/* About Me Paragraph */
 .about p {
     font-size: 25px;
     line-height: 1.6;
     color: #cccccc;
-    /* Slightly lighter text color for better readability */
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 40px;
@@ -222,18 +217,13 @@ nav {
 }
 
 
-/* Centering the button horizontally */
 .button-wrapper {
     text-align: center;
-    /* Centers the content inside */
     margin: 0 auto;
-    /* Ensures it's centered within the parent container */
 }
 
-/* Button styles remain the same */
 .download-btn {
     background-color: #b74b4b;
-    /* Button color */
     color: white;
     padding: 15px 30px;
     border: none;
@@ -246,7 +236,6 @@ nav {
 
 .download-btn:hover {
     background-color: #4bb78f;
-    /* Changes button color on hover */
 }
 
 
@@ -305,7 +294,6 @@ footer .text span a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Styling */
 @media (max-width: 768px) {
     .main-container {
         flex-direction: column;
@@ -356,14 +344,11 @@ footer .text span a:hover {
 
 .typewriter {
     display: flex;
-    /* Use flexbox for alignment */
     align-items: center;
-    /* Center items vertically */
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
     color: white;
     margin-top: 100px;
-    /* Adjust for proper positioning */
     margin-left: 90px;
 }
 
@@ -371,7 +356,6 @@ footer .text span a:hover {
     color: #4bb78f;
     font-weight: bold;
     margin-left: 20px;
-    /* Space between "I'm" and the animated text */
     font-size: 40px;
 }
 
@@ -381,13 +365,9 @@ footer .text span a:hover {
     left: 0;
     font-family: monospace;
     color: rgba(255, 0, 0, 0.2);
-    /* Light red color for binary code */
     white-space: nowrap;
-    /* Prevent wrapping */
     pointer-events: none;
-    /* Ignore mouse events */
     font-size: 14px;
-    /* Adjust size as needed */
 }
 
 
@@ -841,7 +821,6 @@ body {
     font-weight: bold;
 }
 
-/*---------------------Skills---------------*/
 /*--------Skills Section--------*/
 .skills-section {
     padding: 50px 0;
@@ -897,8 +876,6 @@ body {
 }
 
 /*------------------------Projects Section---------------------------*/
-/*------------------------Projects Section---------------------------*/
-/* Projects Section */
 .projects-section {
     padding: 50px 0;
     background-color: #2b2b2b;
@@ -932,9 +909,7 @@ body {
     text-align: center;
     transition: transform 0.3s;
     text-decoration: none;
-    /* Remove underline */
     color: inherit;
-    /* Ensure text is inherited */
 }
 
 .project-card:hover {
