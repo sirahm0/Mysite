@@ -1,0 +1,372 @@
+/* General Reset */
+body, h1, h2, h3, p, a, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+/* Body Style */
+body {
+    background-image: url('../images/linuxWal2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #F0E6D2; /* Off-White or Cream */
+    line-height: 1.6;
+}
+/* Navbar */
+nav {
+    background-color: #5A2F0D; /* Rich Burgundy */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+nav .links .link {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav .links .link a {
+    color: #F0E6D2; /* Off-White or Cream for links */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav .links .link a:hover {
+    color: #D49A38; /* Warm Amber on hover */
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+section .content {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(92, 140, 117, 0.915); /* Muted Olive Green with transparency */
+    border-radius: 10px;
+}
+
+section .content h1 {
+    font-size: 3.5rem;
+    color: #ffffff; /* Warm Amber */
+}
+
+section .content h2 span {
+    font-size: 2.5rem;
+    color: #db9303; /* Off-White or Cream */
+}
+
+section .content p {
+    margin: 10px 0;
+    font-size: 1.3rem;
+    color: #ffffff; /* Light Beige */
+}
+
+.social-links a {
+    display: inline-block;
+    color: #F0E6D2; /* Off-White or Cream */
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.4);
+    color: #e4b94b; /* Brighter gold for hover effect */
+}
+
+/* About Section */
+section.about {
+    background-color: rgba(72, 95, 49, 0.652); /* Dark Olive with transparency */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+section.about h1 {
+    color: #D49A38; /* Warm Amber */
+    font-size: 2.5rem;
+}
+
+.about .container{
+    width: 85%;
+    margin: 0 auto;
+    background-color: #3a2d2dcb;  /* darker background to highlight the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+section.about p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #F0E6D2; /* Off-White or Cream */
+}
+
+.download-btn {
+    background-color: #5A2F0D; /* Rich Burgundy */
+    color: #fff;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: auto;
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #3A3425; /* Darker Burgundy */
+}
+
+/* Timeline */
+.timeline {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #3a2d2d56;  /* darker background to highlight the form */
+
+}
+
+.timeline h1 {
+    color: #D49A38; /* Warm Amber */
+    margin-bottom: 20px;
+    font-size: 3rem;
+
+    
+}
+
+.timeline-item {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #D49A38; /* Warm Amber */
+    border-radius: 10px;
+    background-color: #3a2d2dcb;  /* darker background to highlight the form */
+
+}
+
+.timeline-item h2 {
+    color: #D49A38; /* Warm Amber */
+}
+
+.timeline-item h3 {
+    color: #F0E6D2; /* Off-White or Cream */
+}
+
+
+/* Contact Me Section */
+section.Contact.Me {
+    padding: 15px 20px;
+    text-align: center;
+    background-color: rgba(72, 95, 49, 0.8); /* Dark Olive with transparency */
+}
+
+section.Contact.Me .title span {
+    display: block;
+    color: #F0E6D2; /* Off-White or Cream */
+    font-size: 1.5rem;
+}
+
+section.Contact.Me .download-btn {
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(72, 95, 49, 0.9); /* Dark Olive with transparency */
+    text-align: center;
+    padding: 10px 0;
+    color: #F0E6D2; /* Off-White or Cream */
+    position: relative;
+    width: 100%;
+    margin-top: 85px;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.3);
+}
+
+footer a {
+    color: #ffaa00; /* Off-White or Cream */
+    font-weight: bold;
+}
+
+
+/*------------------------Projects Section---------------------------*/
+
+.projects-section h1 {
+    color: #b07414;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-size: 50px;
+    text-align: center;
+    background-color: #1a1a1a81;
+}
+
+.projects-section h3{
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(26, 26, 26, 0.5); /* translucent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.project-card {
+    background-color: #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-card h2,
+.project-card p {
+    padding: 15px;
+}
+
+.project-card h2 {
+    color: #b74b4b;
+    font-size: 1.5rem;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.project-card:nth-last-child(1):nth-child(odd) {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*------------------------contact Section---------------------------*/
+
+.contactSec h1 {
+    color: #b07414;  /* golden yellow */
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-size: 50px;
+    text-align: center;
+    background-color: rgba(26, 26, 26, 0.5); /* translucent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.contactSec h3 {
+    color: #fff;
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(26, 26, 26, 0.5); /* translucent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.contactSec p {
+    color: #fff;
+    margin-bottom: auto;
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.contactSec .container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #3a2d2dcb;  /* darker background to highlight the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-theme {
+    width: 80%;  /* Adjust the width as needed */
+    padding: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #718ca7;  /* deep blue for the input field */
+    color: #000000;
+    margin: 0 auto;  /* Centers the input field horizontally */
+    display: block;  /* Ensures it behaves as a block element */
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+textarea::placeholder {
+    color: #ccc;  /* Placeholder color */
+    font-size: 1.2em;  /* You can also adjust the placeholder's font size */
+}
+.input-theme::placeholder {
+    color: #ccc; /* Change this to the color you want */
+}
+
+.btn {
+    width: 50%;
+    padding: 15px;
+    border: none;
+    background-color: #5A2F0D; /* Dark Olive with transparency */
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
+.btn:hover {
+    background-color: #3A3425;  /* golden yellow for the button */
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
+    color: #ccc;
+    
+}
+
+.link-theme {
+    color: #007bff;  /* deep blue for the email link */
+    text-decoration: none;
+    
+}
+
+.link-theme:hover {
+    text-decoration: underline;
+}
+
